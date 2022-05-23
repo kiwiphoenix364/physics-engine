@@ -6,8 +6,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         canJump = false
         hittingwall = false
         mySprite.vy = -200
-        mySprite.ay = -400
-        pause(100)
         mySprite.ay = 400
     }
 })
@@ -63,39 +61,71 @@ function GenerateCollision () {
         ........555555555555555.........
         ..........55555555555...........
         `, SpriteKind.movingplatform), sprites.create(img`
-        55555555555555555555555555555555
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        5..............................5
-        55555555555555555555555555555555
-        `, SpriteKind.Player)]
+        1111111111111111111111111111111111111111111111111111111111111111
+        1..............................................................1
+        1..............................................................1
+        1..............................................................1
+        1..............................................................1
+        1..............................................................1
+        .1.............................................................1
+        .1.............................................................1
+        .1.............................................................1
+        .1.............................................................1
+        .1.............................................................1
+        .1.............................................................1
+        .1.............................................................1
+        ..1............................................................1
+        ..1............................................................1
+        ..1............................................................1
+        ..1............................................................1
+        ..1............................................................1
+        ..1............................................................1
+        ...1...........................................................1
+        ...1...........................................................1
+        ...1...........................................................1
+        ...1...........................................................1
+        ...1...........................................................1
+        ...1...........................................................1
+        ....1..........................................................1
+        ....1..........................................................1
+        ....1..........................................................1
+        ....1..........................................................1
+        ....1..........................................................1
+        ....1..........................................................1
+        .....1.........................................................1
+        .....1.........................................................1
+        .....1.........................................................1
+        .....1.........................................................1
+        .....1.........................................................1
+        .....1.........................................................1
+        .....1.........................................................1
+        ......1........................................................1
+        ......1........................................................1
+        ......1........................................................1
+        ......1........................................................1
+        ......1........................................................1
+        ......1........................................................1
+        .......1.......................................................1
+        .......1.......................................................1
+        .......1.......................................................1
+        .......1.......................................................1
+        .......1.......................................................1
+        .......1.......................................................1
+        ........1......................................................1
+        ........1......................................................1
+        ........1......................................................1
+        ........1......................................................1
+        ........1......................................................1
+        ........1......................................................1
+        ........1......................................................1
+        .........1.....................................................1
+        .........1.....................................................1
+        .........1.....................................................1
+        .........1.....................................................1
+        .........1.....................................................1
+        .........1.....................................................1
+        ..........111111111111111111111111111111111111111111111111111111
+        `, SpriteKind.movingplatform)]
     numberOfMovingPlatformImages = movingPlatforImages.length
     movingPlatformCollisonImages = [img`
         cccccccccccccccccccccccccccccccc
@@ -137,49 +167,81 @@ function GenerateCollision () {
         c.............................c.
         c.............................c.
         c.............................c.
-        ................................
-        ................................
-        ................................
-        ................................
-        ................................
-        ................................
-        ................................
-        ................................
-        ................................
-        ................................
+        .c...........................c..
+        .c...........................c..
+        ..c.........................c...
+        ..c.........................c...
+        ...c.......................c....
+        ....c.....................c.....
+        .....c...................c......
+        ......cc...............cc.......
+        ........cc...........cc.........
+        ..........ccccccccccc...........
         `, img`
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
-        cccccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        c..............................................................c
+        c..............................................................c
+        c..............................................................c
+        c..............................................................c
+        c..............................................................c
+        .c.............................................................c
+        .c.............................................................c
+        .c.............................................................c
+        .c.............................................................c
+        .c.............................................................c
+        .c.............................................................c
+        .c.............................................................c
+        ..c............................................................c
+        ..c............................................................c
+        ..c............................................................c
+        ..c............................................................c
+        ..c............................................................c
+        ..c............................................................c
+        ...c...........................................................c
+        ...c...........................................................c
+        ...c...........................................................c
+        ...c...........................................................c
+        ...c...........................................................c
+        ...c...........................................................c
+        ....c..........................................................c
+        ....c..........................................................c
+        ....c..........................................................c
+        ....c..........................................................c
+        ....c..........................................................c
+        ....c..........................................................c
+        .....c.........................................................c
+        .....c.........................................................c
+        .....c.........................................................c
+        .....c.........................................................c
+        .....c.........................................................c
+        .....c.........................................................c
+        .....c.........................................................c
+        ......c........................................................c
+        ......c........................................................c
+        ......c........................................................c
+        ......c........................................................c
+        ......c........................................................c
+        ......c........................................................c
+        .......c.......................................................c
+        .......c.......................................................c
+        .......c.......................................................c
+        .......c.......................................................c
+        .......c.......................................................c
+        .......c.......................................................c
+        ........c......................................................c
+        ........c......................................................c
+        ........c......................................................c
+        ........c......................................................c
+        ........c......................................................c
+        ........c......................................................c
+        ........c......................................................c
+        .........c.....................................................c
+        .........c.....................................................c
+        .........c.....................................................c
+        .........c.....................................................c
+        .........c.....................................................c
+        .........c.....................................................c
+        ..........cccccccccccccccccccccccccccccccccccccccccccccccccccccc
         `]
     for (let index = 0; index <= numberOfMovingPlatformImages; index++) {
         // put the tilemap locations that correspond to the order of your index of moving platform images and collisions
@@ -330,20 +392,9 @@ let mySprite3 = sprites.create(img`
     c 
     c 
     c 
-    c 
-    c 
-    c 
-    c 
-    c 
-    c 
-    c 
-    c 
     `, SpriteKind.Player)
 mySprite3.setFlag(SpriteFlag.Invisible, true)
 GenerateCollision()
-game.onUpdate(function () {
-	
-})
 game.onUpdate(function () {
     canJump = mySprite.isHittingTile(CollisionDirection.Bottom)
     controller.moveSprite(mySprite, 100, 0)
@@ -356,22 +407,41 @@ game.onUpdate(function () {
         for (let index322 = 0; index322 <= value3.width; index322++) {
             for (let index5 = 0; index5 <= value3.height; index5++) {
                 if (movingPlatformCollisonImages[sprites.readDataNumber(value3, "type")].getPixel(index322, index5) != 0) {
-                    everyframecolx.push(value3.left + index322 + 1)
+                    everyframecolx.push(value3.left + index322)
                     everyframecoly.push(value3.top + index5 + 1)
                 }
             }
         }
     }
-    mySprite3.setPosition(mySprite.x, mySprite.bottom)
+    mySprite3.x = mySprite.x
+    mySprite3.top = mySprite.bottom
     for (let value4 of spriteutils.getSpritesWithin(SpriteKind.movingplatform, 50, mySprite)) {
         if (value4.overlapsWith(mySprite3)) {
             mySprite.x += value4.vx / 50
             mySprite.y += value4.vy / 50
         }
     }
+    for (let index42 = 0; index42 <= everyframecolx.length; index42++) {
+        if (mySprite.top + 1 <= everyframecoly[index42] && mySprite.y - 1 >= everyframecoly[index42]) {
+            if (mySprite.right - 6 <= everyframecolx[index42] && mySprite.right >= everyframecolx[index42]) {
+                if (controller.right.isPressed() || mySprite.ay > 0) {
+                    controller.moveSprite(mySprite, 0, 0)
+                    mySprite.right = everyframecolx[index42] + 1
+                    break;
+                }
+            }
+            if (mySprite.left <= everyframecolx[index42] && mySprite.left + 6 >= everyframecolx[index42]) {
+                if (controller.left.isPressed() || mySprite.ay < 0) {
+                    controller.moveSprite(mySprite, 0, 0)
+                    mySprite.left = everyframecolx[index42] - 0
+                    break;
+                }
+            }
+        }
+    }
     for (let index52 = 0; index52 <= everyframecolx.length; index52++) {
         if (mySprite.x + 1 > everyframecolx[index52] && mySprite.x - 1 < everyframecolx[index52]) {
-            if (mySprite.vy >= 0 - 50 && mySprite.bottom - 3 <= everyframecoly[index52]) {
+            if (mySprite.vy >= -100 && mySprite.bottom - 3 <= everyframecoly[index52]) {
                 if (mySprite.bottom + 3 >= everyframecoly[index52]) {
                     mySprite.setFlag(SpriteFlag.GhostThroughWalls, true)
                     hittingwall = true
@@ -382,34 +452,26 @@ game.onUpdate(function () {
                     canJump = true
                 }
             }
-        }
-    }
-    for (let index42 = 0; index42 <= everyframecolx.length; index42++) {
-        if (mySprite.top + 2 <= everyframecoly[index42] && mySprite.y - 3 >= everyframecoly[index42]) {
-            if (mySprite.right <= everyframecoly[index42] && mySprite.right + 0 >= everyframecoly[index42]) {
-                if (controller.right.isPressed()) {
-                    controller.moveSprite(mySprite, 0, 0)
-                    mySprite.right = everyframecolx[index42] - 1
-                }
-            } else if (mySprite.left <= everyframecolx[index42] && mySprite.left + 6 >= everyframecolx[index42]) {
-                if (controller.left.isPressed()) {
-                    controller.moveSprite(mySprite, 0, 0)
-                    mySprite.left = everyframecolx[index42] + 1
-                }
+            if (mySprite.vy <= 0 && (mySprite.top <= everyframecoly[index52] && mySprite.top + 4 >= everyframecoly[index52])) {
+                mySprite.vy = 0
+                mySprite.top = everyframecoly[index52]
             }
         }
     }
     for (let index4 = 0; index4 <= TileCollisionArrayX.length; index4++) {
         if (mySprite.top + 2 <= TileCollisionArrayY[index4] && mySprite.y - 3 >= TileCollisionArrayY[index4]) {
-            if (mySprite.right <= TileCollisionArrayX[index4] && mySprite.right + 0 >= TileCollisionArrayX[index4]) {
-                if (controller.right.isPressed()) {
+            if (mySprite.right - 6 <= TileCollisionArrayX[index4] && mySprite.right >= TileCollisionArrayX[index4]) {
+                if (controller.right.isPressed() || mySprite.ay > 0) {
                     controller.moveSprite(mySprite, 0, 0)
-                    mySprite.right = TileCollisionArrayX[index4] - 1
+                    mySprite.right = TileCollisionArrayX[index4] + 1
+                    break;
                 }
-            } else if (mySprite.left <= TileCollisionArrayX[index4] && mySprite.left + 6 >= TileCollisionArrayX[index4]) {
-                if (controller.left.isPressed()) {
+            }
+            if (mySprite.left <= TileCollisionArrayX[index4] && mySprite.left + 6 >= TileCollisionArrayX[index4]) {
+                if (controller.left.isPressed() || mySprite.ay < 0) {
                     controller.moveSprite(mySprite, 0, 0)
-                    mySprite.left = TileCollisionArrayX[index4] + 1
+                    mySprite.left = TileCollisionArrayX[index4] - 0
+                    break;
                 }
             }
         }
@@ -427,6 +489,11 @@ game.onUpdate(function () {
                     canJump = true
                 }
             }
+            if (mySprite.vy <= 0 && (mySprite.top <= TileCollisionArrayY[index43] && mySprite.top + 4 >= TileCollisionArrayY[index43])) {
+                let index52 = 0
+                mySprite.vy = 0
+                mySprite.top = everyframecoly[index52]
+            }
         }
     }
     if (hittingwall) {
@@ -442,6 +509,8 @@ game.onUpdateInterval(1000, function () {
     for (let value6 of sprites.allOfKind(SpriteKind.movingplatform)) {
         if (sprites.readDataNumber(value6, "type") == 1) {
             value6.vx = 10
+        } else {
+            value6.vx = -5
         }
     }
 })

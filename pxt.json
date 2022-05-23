@@ -1,5 +1,5 @@
 {
-    "name": "Physics Engine",
+    "name": "Physics Engine Demo!",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -39,5 +39,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
